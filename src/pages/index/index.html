@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="../common/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../common/plugins/datatables/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="../common/plugins/datatables/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="table-control">
+        <div class="form-inline">
+          <div class="form-group">
+            <label for="name">姓名</label>
+            <input type="text" class="form-control" id="name" placeholder="请输入">
+          </div>
+          <div class="form-group">
+            <label for="sex">姓别</label>
+            <select class="form-control" id="sex" placeholder="请选择">
+              <option value="">全部</option>
+              <option value="1">男</option>
+              <option value="2">女</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="age">年龄</label>
+            <select class="form-control" id="age" placeholder="请选择">
+              <option value="">全部</option>
+              <option value="1">18~25岁</option>
+              <option value="2">26~30岁</option>
+              <option value="3">31~35岁</option>
+              <option value="4">36~40岁</option>
+              <option value="5">41~50岁</option>
+              <option value="6">大于50岁</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="degree">文凭</label>
+            <select class="form-control" id="degree" placeholder="请选择">
+              <option value="">全部</option>
+              <option value="1">小学</option>
+              <option value="2">初中</option>
+              <option value="3">高中</option>
+              <option value="4">中专</option>
+              <option value="5">大专</option>
+              <option value="6">大学</option>
+              <option value="7">研究生及以上</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="mobile">手机号</label>
+            <input type="text" class="form-control" id="mobile" placeholder="请输入">
+          </div>
+          <button class="btn btn-default" id="resetBtn">重置</button>
+          <button class="btn btn-default" id="searchBtn">查询</button>
+          <button class="btn btn-primary" id="createBtn">新建</button>
+        </div>
+      </div>
+      <div class="section-table">
+        <table class="table">
+          <thead>
+          <tr>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>年龄</th>
+            <th>文凭</th>
+            <th>联系方式</th>
+            <th>住址</th>
+            <th>意向</th>
+            <th>备注</th>
+            <th>操作</th>
+          </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="modal fade" tabindex="-1" role="dialog" id="alertModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">提示</h4>
+          </div>
+          <div class="modal-body">
+            <p id="errorMsg" style="text-align: center;color:red;"></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <button type="button" class="btn btn-primary"  id="confirmDel">确定</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+    <script src="../common/js/lib/jquery.min.js"></script>
+    <script>if (window.module) module = window.module;</script>
+    <script src="../common/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../common/plugins/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="../common/plugins/datatables/js/dataTables.bootstrap.min.js"></script>
+<!--    <script src="../common/js/util.js"></script>-->
+    <script src="./index.js"></script>
+  </body>
+</html>
